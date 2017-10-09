@@ -1,26 +1,21 @@
 {
-  "manifest_version": 2,
-  "name": "WaniKani Companion",
-  "version": "1.2.4.3",
-  "description": "Your favorite Japanese learning app at a click away.",
+  "author": "imasaru",
+  "background": {
+    "page": "background.html",
+    "persistent": true
+  },
   "browser_action": {
     "default_title": "WaniKani Companion",
-    "default_icon": "/img/wanikani/icon.png",
+    "default_icon": {
+      "128": "/img/wanikani/icon.png"
+    },
     "default_popup": "/html/home.html"
   },
-  "icons": {
-    "128": "/img/wanikani/icon.png"
-  },
-  "permissions": [
-    "*://*.wanikani.com/",
-    "notifications",
-    "storage",
-    "webRequest",
-    "webRequestBlocking"
-  ],
   "content_scripts": [
     {
-      "matches": ["*://www.wanikani.com/*"],
+      "matches": [
+        "*://www.wanikani.com/*"
+      ],
       "js": [
         "/js/web-content.js"
       ],
@@ -28,11 +23,22 @@
       "all_frames": true
     }
   ],
-  "background": {
-    "scripts": [
-      "/js/lib/moment.min.js",
-      "/js/helper.js",
-      "/js/background.js"
-    ]
+  "description": "Your favorite Japanese learning app, one click away.",
+  "icons": {
+    "128": "/img/wanikani/icon.png"
+  },
+  "manifest_version": 2,
+  "name": "WaniKani Companion",
+  "permissions": [
+    "*://*.wanikani.com/",
+    "notifications",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "version": "1.2.4.3",
+  "-ms-preload": {
+    "backgroundScript": "backgroundScriptsAPIBridge.js",
+    "contentScript": "contentScriptsAPIBridge.js"
   }
 }
