@@ -7,7 +7,8 @@
   "browser_action": {
     "default_title": "WaniKani Companion",
     "default_icon": {
-      "128": "/img/wanikani/icon.png"
+      "19": "/img/wanikani/icon128.png",
+      "38": "/img/wanikani/icon128.png"
     },
     "default_popup": "/html/home.html"
   },
@@ -25,7 +26,10 @@
   ],
   "description": "Your favorite Japanese learning app, one click away.",
   "icons": {
-    "128": "/img/wanikani/icon.png"
+    "16": "/img/wanikani/icon128.png",
+    "32": "/img/wanikani/icon128.png",
+    "48": "/img/wanikani/icon128.png",
+    "128": "/img/wanikani/icon128.png"
   },
   "manifest_version": 2,
   "name": "WaniKani Companion",
